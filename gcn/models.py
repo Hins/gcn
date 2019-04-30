@@ -81,7 +81,8 @@ class Model(object):
         saver.restore(sess, save_path)
         print("Model restored from file: %s" % save_path)
 
-
+# HinsCom: all the same with class GCN in _build(), besides Dense layer as neural network layer
+#          GraphConvolution layer in GCN network
 class MLP(Model):
     def __init__(self, placeholders, input_dim, **kwargs):
         super(MLP, self).__init__(**kwargs)
